@@ -1,1 +1,8 @@
 --// ชื่อมาสไรเดอร์ในคริป Diend Genm Evol \\--
+local args = {
+    [1] = "Select";
+    [2] = "Kamen Rider ใส่ชื่อมาสไรเดอร์";
+    [3] = game:GetService("Players"):WaitForChild("MPAOIYG_Gold", 9e9):WaitForChild("PlayerGui", 9e9):WaitForChild("Menu", 9e9);
+}
+
+game:GetService("Players"):WaitForChild("MPAOIYG_Gold", 9e9):WaitForChild("PlayerGui", 9e9):WaitForChild("Menu", 9e9):WaitForChild("Frame", 9e9):WaitForChild("LocalScript", 9e9):WaitForChild("RemoteEvent", 9e9):FireServer(unpack(args))
