@@ -1,2 +1,0 @@
-local Plr = "ใส่ชื่อที่เราจะวาป"
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Plr].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0) --//ใส่ทำตำแหน่องที่จะวาปไปข้างหน้าหรือข้างหลัง
