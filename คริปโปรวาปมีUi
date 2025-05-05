@@ -1,0 +1,26 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/DenDenZZZ/Kavo-UI-Library/main/Kavo.lua"))()
+local Window = Library.CreateLib("สอน NaKub", "Synapse")
+local Tab = Window:NewTab("Teleport Players")
+local Section = Tab:NewSection("")
+
+players = {}
+for i, v in pairs(game:GetService("Players"):GetChildren()) do
+        table.insert(players, v.Name)
+end
+
+local drop = Section:NewDropdown("Select Players", "", players, function(plr)
+    Select = plr
+end)
+
+Section:NewButton("Refresh", "", function()
+     Plr = {}
+    for i, v in pairs(game:GetService("Players"):GetChildren()) do
+        table.insert(Plr, v.Name)
+      end
+     drop:Refresh(Plr)
+end)
+
+Section:NewButton("Teleport", "TextboxInfo", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select].Character.HumanoidRootPart.CFrame
+end)
+
